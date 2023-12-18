@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Ad ve Soyad Formu</title>
+            <style>
+                #okul-logo {
+                    display: none;
+                    width: 200px;
+                }
+            </style>
+        </head>
+        <body>
+            <h2>Ad ve Soyad Öğrenci Formu</h2>
+            <form>
+                <label for="ad">Ad:</label>
+                <input type="text" id="ad" name="ad"><br><br>
+                
+                <label for="soyad">Soyad:</label>
+                <input type="text" id="soyad" name="soyad"><br><br>
+
+                <input type="button" value="Veri Gönder" onclick="veriGonder()">
+            </form>
+        
+            <img id="okul-logo" src="image/logolu.jpg" alt="Okul Logosu">
+        
+            <h3>Girilen Veriler:</h3>
+            <p id="sonuc"></p>
+        
+            <script>
+                function veriGonder() {
+                    var ad = document.getElementById("ad").value;
+                    var soyad = document.getElementById("soyad").value;
+                    var sonuc = document.getElementById("sonuc");
+                    var logo = document.getElementById("okul-logo");
+        
+                    logo.style.display = "block";
+                    sonuc.innerHTML = "Ad: " + ad + "<br><br>Soyad: " + soyad + "<br><br>Numara : 200030642" +"<br><br>Bölüm : Bilgisayar Programcılığı" + "<br><br> Açıklama : Web Programlama Projemde kişisel portfolyo sitesi yaptım ve ağırlıklı olarak web kısmından çok mobil web kısmına ağırlık verdim, kendime göre slider ve animasyonlar kullanarak zenginleştirdim ekstra olarakta renk seçimlerine de uzun bir süre çalışıldı projede.";
+                }
+            </script>
+        </body>
+    </body>
+    </html>
+    
+
+
+</body>
+</html>
